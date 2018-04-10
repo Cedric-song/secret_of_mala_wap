@@ -1,29 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <app-header title="Home"></app-header>
     <router-view/>
+
+    <mt-tabbar v-model="selected" fixed>
+      <mt-tab-item id="Home" @click.native="$go({name: 'Home'})">
+        Home
+      </mt-tab-item>
+      <mt-tab-item id="Menu" @click.native="$go({name: 'Menu'})">
+        Menu
+      </mt-tab-item>
+      <mt-tab-item id="Times" @click.native="$go({name: 'Times'})">
+        Times
+      </mt-tab-item>
+      <mt-tab-item id="Mine" @click.native="$go({name: 'Mine'})">
+        Mine
+      </mt-tab-item>
+    </mt-tabbar>
+
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import AppHeader from '@/components/App-Header'
+export default {
+  name: 'App',
+  components: {
+    AppHeader
+  },
+  data() {
+    return {
+      selected: 'Home'
     }
   }
+}
+</script>
+
+<style lang="scss" scoped>
+#app {
+  height: 100vh;
+  overflow: hidden;
 }
 </style>

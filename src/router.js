@@ -1,21 +1,34 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from './views/Home.vue';
-import About from './views/About.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/views/Home'
+import Menu from '@/views/Menu'
+import Times from '@/views/Times'
+import Mine from '@/views/Mine'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'Home',
+      component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About,
+      path: '/menu',
+      name: 'Menu',
+      component: Menu
     },
-  ],
-});
+    {
+      path: '/times',
+      name: 'Times',
+      component: Times
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: Mine
+    }
+  ]
+})
