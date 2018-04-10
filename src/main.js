@@ -4,9 +4,9 @@ import router from './router'
 import store from './store'
 import '@/assets/index'
 import '@/utils/vue-prototype'
-import initRem from '@/utils/px-to-rem'
+// import initRem from '@/utils/px-to-rem'
 
-initRem()
+// initRem()
 
 Vue.config.productionTip = false
 

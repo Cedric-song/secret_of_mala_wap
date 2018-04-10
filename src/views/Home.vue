@@ -9,40 +9,41 @@
 </template>
 
 <script>
-import img_01 from '../assets/imgs/img_01.jpeg'
-import img_02 from '../assets/imgs/img_02.jpeg'
-import img_03 from '../assets/imgs/img_03.jpeg'
+import img_01 from "../assets/imgs/img_01.jpeg";
+import img_02 from "../assets/imgs/img_02.jpeg";
+import img_03 from "../assets/imgs/img_03.jpeg";
 
 export default {
-  name: 'home',
+  name: "home",
 
   data() {
     return {
       swipeList: [
         {
           img: img_01,
-          name: 'The Secret of MALA'
+          name: "The Secret of MALA"
         },
         {
           img: img_02,
-          name: 'The Secret of MALA'
+          name: "The Secret of MALA"
         },
         {
           img: img_03,
-          name: 'The Secret of MALA'
+          name: "The Secret of MALA"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .swiper {
-  height: 36rem;
+  height: 30vh;
   background: red;
   img {
     width: 100%;
+    height: 100%;
   }
 }
 </style>
